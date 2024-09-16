@@ -20,7 +20,7 @@ try {
 }
 
 // Fetch table numbers
-$tables = $pdo->query("SELECT table_number FROM tables")->fetchAll(PDO::FETCH_COLUMN);
+$tables = $pdo->query("SELECT table_numbe FROM tables")->fetchAll(PDO::FETCH_COLUMN);
 ?>
 
 <!doctype html>
