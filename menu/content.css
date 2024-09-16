@@ -1,0 +1,48 @@
+/* Custom styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    padding: 20px;
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* Light text color */
+}
+
+.sidebar a {
+    display: block;
+    color: #ffffff;
+    padding: 10px 0;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: #17a2b8; /* Hover color */
+}
+
+.main-content {
+    margin-left: 250px; /* Adjust with sidebar width */
+    padding: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card img {
+    height: 200px; /* Adjust image height */
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: relative;
+        bottom: auto;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}

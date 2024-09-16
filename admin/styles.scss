@@ -1,0 +1,336 @@
+$lred:#E57373;
+$red:#F44336;
+
+@mixin transition($in) {
+	transition:$in;
+	-webkit-transition:$in;
+	-moz-transition:$in;
+	-o-transition:$in;
+	-ms-transition:$in;
+}
+body {
+	margin:0;
+	padding:0;
+	background-color:wheat;
+}
+* {
+	font-family:Helvetica,sans-serif;
+	color:black;
+}
+
+.G1 {
+    transform: translate(20px, 85px) rotate(-30deg);
+}
+
+.e1 {
+    transform: translate(13px, 60px) rotate(-25deg);
+}
+
+.e2 {
+    transform: translate(6px, 40px) rotate(-20deg);
+}
+
+.k1 {
+    transform: translate(3px, 23px) rotate(-15deg);
+}
+
+.s1 {
+    transform: translate(2px, 14px) rotate(-10deg);
+}
+
+.f {
+    transform: translate(1px, 8px) rotate(-5deg);
+}
+
+.o {
+    transform: translate(0px, 5px) rotate(0deg);
+}
+
+.r {
+    transform: translate(-1px, 8px) rotate(5deg);
+}
+
+.G2 {
+    transform: translate(-2px, 14px) rotate(10deg);
+}
+
+.e3 {
+    transform: translate(-3px, 25px) rotate(15deg);
+}
+
+.e4 {
+    transform: translate(-6px, 40px) rotate(20deg);
+}
+
+.k2 {
+    transform: translate(-14px, 60px) rotate(25deg);
+}
+
+.s2 {
+    transform: translate(-20px, 80px) rotate(30deg);
+}
+
+/* An inline-block element is placed as an inline
+ element (on the same line as adjacent content), 
+ but it behaves like a block element  */
+
+span {
+    display: inline-block;
+    font-weight: bolder;
+}
+#mmeennuu {
+	display:none;
+}
+
+#mmeennuu:checked ~ .menu {
+
+	width:500px;
+	border-radius:5px;
+	background-color:transparent;
+	border:3px solid $red;
+	height:85px;
+
+	&>ul {
+		display:block;
+		opacity:1;
+	}
+	&>.barry {
+		display:none;
+	}
+}
+
+.menu {
+	display:block;
+	margin:30px auto;
+	width:100px;
+	height:100px;
+	background-color:$red;
+	border:3px solid transparent;
+	border-radius:50%;
+	overflow:inherit;
+	cursor:pointer;
+	@include transition(all 0.5s ease-in-out);
+
+	div.barry {
+		width:40px;
+		margin:35px auto;
+
+
+		.bar {
+			display:block;
+			width:100%;
+			height:5px;
+			margin-top:3px;
+			border-radius:2px;
+			background-color:#ff0606;
+		}
+	}
+
+	ul {
+		opacity:0;
+		display:none;
+		@include transition(all 0.5s ease-in-out);
+		list-style-type:none;
+		padding:0;
+		width:500px;
+		text-align:center;
+		margin-bottom: 0;
+
+		li {
+			display:inline-block;
+			a {
+				text-decoration:none;
+				display:inline-block;
+				padding:15px 25px;
+				color:$red;
+				font-size:20px;
+				@include transition(all 0.3s ease-in-out);
+				
+				border-radius:10px;
+
+				&:hover {
+					border-color:$red;
+				}
+				
+				&:target {
+					border-bottom-color:$red;
+				}
+			}
+		}
+	}
+}
+
+.popup{
+    background-color: #ffffff;
+    width: 420px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none; 
+    text-align: center;
+}
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+    background: #03549a;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup h2{
+  margin-top: -20px;
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    display: block;
+    // width: 150px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #0f72e5;
+    border-radius: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 0;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: wheat;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+} 
+/* old */
+// body {
+//   font-family: Arial, sans-serif;
+//   margin: 0;
+//   display: flex;
+// }
+
+// .sidebar {
+//   width: 250px;
+//   background-color: #333;
+//   color: white;
+//   padding: 20px;
+//   height: 100vh;
+//   position: fixed;
+// }
+
+// .sidebar h2 {
+//   text-align: center;
+// }
+
+// .sidebar ul {
+//   list-style-type: none;
+//   padding: 0;
+// }
+
+// .sidebar ul li {
+//   margin: 20px 0;
+// }
+
+// .sidebar ul li a {
+//   color: white;
+//   text-decoration: none;
+// }
+
+// .sidebar ul li a:hover {
+//   text-decoration: underline;
+// }
+
+// .main-content {
+//   margin-left: 250px;
+//   padding: 20px;
+//   width: 100%;
+// }
+
+// section {
+//   margin-bottom: 40px;
+// }
+
+// form {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// form label {
+//   margin-top: 10px;
+// }
+
+// form input, form textarea, form button {
+//   margin-top: 5px;
+//   padding: 10px;
+//   font-size: 16px;
+// }
+
+// form button {
+//   width: 150px;
+//   background-color: #4CAF50;
+//   color: white;
+//   border: none;
+//   cursor: pointer;
+//   margin-top: 20px;
+// }
+
+// form button:hover {
+//   background-color: #45a049;
+// }
