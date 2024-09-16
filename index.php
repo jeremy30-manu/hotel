@@ -35,7 +35,7 @@ $tables = $pdo->query("SELECT table_number FROM tables")->fetchAll(PDO::FETCH_CO
 <body>
     <header></header>
     <main>
-        <h1>Welcome to **** Menu</h1>
+        <h1>Welcome to our Menu</h1>
         <div class="input-group mb-3">
             <select class="form-select" id="tableNumber">
                 <option value="" selected disabled>Select table number</option>
